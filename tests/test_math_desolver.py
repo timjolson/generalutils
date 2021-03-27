@@ -6,7 +6,7 @@ import time
 
 from generalutils.math import DESolver, DESolver_Pbar
 
-logging.basicConfig(filename='./log.log', filemode='w', level=logging.DEBUG)
+logging.basicConfig(filename='logs/test_math_desolver.log', filemode='w', level=logging.DEBUG)
 
 
 def clear_file(filename):
@@ -29,7 +29,7 @@ def test_state():
 
 
 def test_from_state_file():
-    filename = "data/from_state_file"
+    filename = "logs/desolver_from_state_file"
     clear_file(filename)
 
     # make file
@@ -58,7 +58,7 @@ def test_from_state_file():
 
 
 def test_iterate_load_save():
-    filename = 'data/iterate_load_save'
+    filename = 'logs/desolver_iterate_load_save'
     clear_file(filename)
 
     # iterate solver
