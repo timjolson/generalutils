@@ -8,4 +8,5 @@ setup(
     author='timjolson',
     author_email='3058949-timjolson@users.noreply.gitlab.com',
     packages=find_packages(),
+    tests_require=['pytest'],
 )

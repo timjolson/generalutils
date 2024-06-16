@@ -1,5 +1,6 @@
 from types import MethodType, FunctionType, LambdaType
 from types import SimpleNamespace
+from logging import Formatter, LogRecord
 import sys
 import os
 
@@ -172,4 +173,22 @@ class KeyboardMonitor:
         return rv
 
 
-__all__ = ['is_func', 'get_all_funcs', 'get_all_classes', 'apply_default_args']
+class MultilineFormatter(Formatter):
+    """
+    Inspired by https://stackoverflow.com/a/45217732
+    """
+    def format(self, record: LogRecord):
+        save_msg = record.msg
+        if not isinstance(save_msg, str):
+            save_msg = str(save_msg)
+        output = ""
+        for line in save_msg.splitlines():
+            record.msg = line
+            output += super().format(record) + "\n"
+        output = output[:-1]
+        record.msg = save_msg
+        record.message = output
+        return output
+
+
+__all__ = ['is_func', 'get_all_funcs', 'get_all_classes', 'apply_default_args', 'MultilineFormatter']

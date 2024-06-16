@@ -6,7 +6,7 @@ import queue
 import sys
 import os
 from collections import defaultdict
-from generalutils.logger import MultilineFormatter
+from generalutils.devel import MultilineFormatter
 
 logger = logging.getLogger(__name__)
 logger.addHandler(logging.NullHandler())

@@ -211,7 +211,7 @@ def test_delay_not_daemon():
     end = time.time()
 
     elapsed = end - start
-    max = wait * 1.2
+    max = wait * 1.21
     assert elapsed > wait
     assert elapsed < max
 

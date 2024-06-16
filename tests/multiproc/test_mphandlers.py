@@ -5,7 +5,7 @@ import logging
 import multiprocessing as mp
 from generalutils.multiprocessing import MPFileHandler, MPStreamHandler
 
-logging.basicConfig(filename='logs/test_handlers.log', level=logging.DEBUG, filemode='w', format="%(name)s:%(message)s")
+logging.basicConfig(filename='logs/test_handlers.log', level=logging.DEBUG, filemode='w', format="%(name)s:%(lineno)s:%(message)s")
 testlogger = logging.getLogger('testlogger')
 
 
