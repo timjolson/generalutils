@@ -2,7 +2,7 @@
 name = "generalutils"
 version = "0.1"
 authors = [
-    { name = "timjolson", email = "timjolson@users.noreply.github.com" }
+    { name = "timjolson", email = "3058949-timjolson@users.noreply.gitlab.com" }
 ]
 description = "General utilities package."
 readme = "README.md"
@@ -10,6 +10,14 @@ requires-python = ">=3.6"
 
 [project.optional-dependencies]
 test = ["pytest"]
+
+# Optional dependencies for extra features
+extra = [
+    "scipy",
+    "numpy",
+    "tqdm",
+    "redis"
+]
 
 [build-system]
 requires = ["setuptools>=42", "wheel"]
