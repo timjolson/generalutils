@@ -2,14 +2,14 @@
 name = "generalutils"
 version = "0.1"
 authors = [
-    { name = "timjolson", email = "3058949-timjolson@users.noreply.gitlab.com" }
+    { name = "timjolson", email = "timjolson@users.noreply.github.com" }
 ]
 description = "General utilities package."
 readme = "README.md"
 license = { file = "LICENSE" }
 requires-python = ">=3.6"
 
-urls = { "Homepage" = "https://gitlab.com/timjolson/generalutils" }
+urls = { "Homepage" = "https://github.com/timjolson/generalutils" }
 
 [project.optional-dependencies]
 test = ["pytest"]
